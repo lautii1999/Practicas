@@ -43,6 +43,41 @@ $productos = $sentencia->fetchAll(PDO::FETCH_OBJ);
 }
 ?>
 
+<?php 
+ if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'error'){
+
+ 
+?>
+<div class="alert alert-danger alert-primary" role="alert">
+    <strong>Error¡ vuelve a intentar </strong>
+</div>
+<?php 
+}
+?>
+<?php 
+ if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'editado'){
+
+ 
+?>
+<div class="alert alert-success alert-primary" role="alert">
+    <strong>Los datos fueron actualizados </strong>
+</div>
+<?php 
+}
+?>
+
+<?php 
+ if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'eliminado'){
+
+ 
+?>
+<div class="alert alert-warning alert-primary" role="alert">
+    <strong>Los datos han sido eliminados</strong>
+</div>
+<?php 
+}
+?>
+
 
 
 
@@ -85,8 +120,11 @@ $productos = $sentencia->fetchAll(PDO::FETCH_OBJ);
                         <td scope="row"><?php echo $dato->marca ?>              </td>
                         <td scope="row" ><?php echo $dato->precio ?>            </td>
                         <td scope="row"  ><?php echo $dato->stock ?>            </td>
-                        <td scope="row"  >Editar</td>
-                        <td scope="row"  > Eliminar</td>
+
+<td><a class="text-success" href="editar.php?producto_id=<?php echo $dato->producto_id; ?>"><i class="bi bi-pencil-square"></i></a></td>
+
+<td><a  onclick="return confirm('Estas seguro de eliminar?');" class="text-danger" href="eliminar.php?producto_id=<?php echo $dato->producto_id; ?>"><i class="bi bi-trash2-fill"></i></a></td>
+
 
 
                     </tr>
