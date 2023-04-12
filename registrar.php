@@ -17,7 +17,7 @@ $desc = $_POST['txtDescripcion'];
 $mark = $_POST['txtMarca'];
 $prec = $_POST['txtPrecio'];
 $stok = $_POST['txtStock'];
-
+//pasar user_id para poder relacionar las dos tablas.//
 $sentencia = $conn->prepare('INSERT INTO productos (nombre, descripcion, marca, precio, stock)
 VALUES (?,?,?,?,?);');
 
