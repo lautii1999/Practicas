@@ -2,7 +2,7 @@
  session_start();
  require 'database.php';
 
-include 'template/header.php';
+include 'template/navbar.php';
  include 'template/footer.php';
 ?>
 <?php
@@ -84,6 +84,7 @@ $productos = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
 
 <!---fin alerta -->
+
 
         <div class="card">
         <div class="card-header">  

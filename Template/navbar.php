@@ -16,15 +16,10 @@
 
 
 </head>
-
 <body>
-  
-    <div class="container-fluid bg-warning">
-        <div class="row">
-            <div class="col-md">
-            <header class="py-3">    
-              <h3 class="text-center">Bienvenidos </h3>
-            </header>
-            </div>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="logout.php">Salir</a>
+  </div>
+</nav>
+</body>
